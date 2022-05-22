@@ -37,24 +37,68 @@ class _PhoneScreenLayoutState extends State<PhoneScreenLayout> {
           SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.h, vertical: 76.h),
-              child: Column( children: [
-                Text(
-                  'Learn to Code by\nwatching others',
-                  style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 26.sp,
-                    color: Colors.white,
+              child: Column(
+                children: [
+                  Text(
+                    'Learn to Code by\nwatching others',
+                    style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 26.sp,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(height: 24.h),
-                Text(
+                  SizedBox(height: 24.h),
+                  Text(
                     'See how experienced developers solve\nproblems in real-time.Watching\nscripted tutorials is great, but\nunderstanding how developers think is\ninvaluable.',
                     style: GoogleFonts.poppins(
                         color: Colors.white, fontSize: constFontSize.sp),
-                    textAlign: TextAlign.center,),
-                SizedBox(height: 30.h),
-              ],),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 30.h),
+                  Container(
+                  decoration: BoxDecoration(boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 5,
+                      offset: const Offset(0, 10),
+                    )
+                  ]),
+                  child: MaterialButton(
+                    padding: EdgeInsets.symmetric(vertical: 22.h),
+                    onPressed: () {},
+                    elevation: 1,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.r)),
+                    color: blueColor,
+                    minWidth: double.infinity,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        RichText(
+                            text: TextSpan(
+                                text: 'Try it free 7 days ',
+                                style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 14.sp,
+                                    color: Colors.white),
+                                children: [
+                              TextSpan(
+                                text: 'then\n\$20/mon. thereafter',
+                                style: GoogleFonts.poppins(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14.sp,
+                                    color: Colors.white),
+                              )
+                            ])),
+                        SizedBox(height: 4.h),
+                      ],
+                    ),
+                  ),
+                ),
+                ],
+              ),
             ),
           )
         ],
