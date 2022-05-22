@@ -37,7 +37,24 @@ class _PhoneScreenLayoutState extends State<PhoneScreenLayout> {
           SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.h, vertical: 76.h),
-              child: Column( children: [],),
+              child: Column( children: [
+                Text(
+                  'Learn to Code by\nwatching others',
+                  style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 26.sp,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: 24.h),
+                Text(
+                    'See how experienced developers solve\nproblems in real-time.Watching\nscripted tutorials is great, but\nunderstanding how developers think is\ninvaluable.',
+                    style: GoogleFonts.poppins(
+                        color: Colors.white, fontSize: constFontSize.sp),
+                    textAlign: TextAlign.center,),
+                SizedBox(height: 30.h),
+              ],),
             ),
           )
         ],
