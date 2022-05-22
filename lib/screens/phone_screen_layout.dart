@@ -57,46 +57,59 @@ class _PhoneScreenLayoutState extends State<PhoneScreenLayout> {
                   ),
                   SizedBox(height: 30.h),
                   Container(
-                  decoration: BoxDecoration(boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.3),
-                      blurRadius: 5,
-                      offset: const Offset(0, 10),
-                    )
-                  ]),
-                  child: MaterialButton(
-                    padding: EdgeInsets.symmetric(vertical: 22.h),
-                    onPressed: () {},
-                    elevation: 1,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12.r)),
-                    color: blueColor,
-                    minWidth: double.infinity,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        RichText(
-                            text: TextSpan(
-                                text: 'Try it free 7 days ',
-                                style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 14.sp,
-                                    color: Colors.white),
-                                children: [
-                              TextSpan(
-                                text: 'then\n\$20/mon. thereafter',
-                                style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14.sp,
-                                    color: Colors.white),
-                              )
-                            ])),
-                        SizedBox(height: 4.h),
-                      ],
+                    decoration: BoxDecoration(boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 5,
+                        offset: const Offset(0, 10),
+                      )
+                    ]),
+                    child: MaterialButton(
+                      padding: EdgeInsets.symmetric(vertical: 22.h),
+                      onPressed: () {},
+                      elevation: 1,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12.r)),
+                      color: blueColor,
+                      minWidth: double.infinity,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          RichText(
+                              text: TextSpan(
+                                  text: 'Try it free 7 days ',
+                                  style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 14.sp,
+                                      color: Colors.white),
+                                  children: [
+                                TextSpan(
+                                  text: 'then\n\$20/mon. thereafter',
+                                  style: GoogleFonts.poppins(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 14.sp,
+                                      color: Colors.white),
+                                )
+                              ])),
+                          SizedBox(height: 4.h),
+                        ],
+                      ),
                     ),
                   ),
-                ),
+                  SizedBox(
+                    height: 24.h,
+                  ),
+                  Container(
+                    width: double.infinity,
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 26.h, vertical: 24.h),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12.r),
+                      color: Colors.white,
+                    ),
+                    child: Form(key: _formKey, child: Column()),
+                  )
                 ],
               ),
             ),
