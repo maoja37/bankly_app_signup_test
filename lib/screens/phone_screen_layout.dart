@@ -26,7 +26,7 @@ class _PhoneScreenLayoutState extends State<PhoneScreenLayout> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-           Container(
+          Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage("assets/bg-intro-mobile.png"),
@@ -34,6 +34,12 @@ class _PhoneScreenLayoutState extends State<PhoneScreenLayout> {
               ),
             ),
           ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.h, vertical: 76.h),
+              child: Column( children: [],),
+            ),
+          )
         ],
       ),
     );
