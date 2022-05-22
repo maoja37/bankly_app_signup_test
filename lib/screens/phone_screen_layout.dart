@@ -108,159 +108,186 @@ class _PhoneScreenLayoutState extends State<PhoneScreenLayout> {
                       borderRadius: BorderRadius.circular(12.r),
                       color: Colors.white,
                     ),
-                    child: Form(key: _formKey, child: Column(
-                      children: [
-                        TextFormField(
-                        decoration: InputDecoration(
-                            hintText: 'First Name',
-                            hintStyle: GoogleFonts.poppins(
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w600,
-                              color: greyishBlueColor,
-                            ),
-                            border: const OutlineInputBorder(
-                                borderSide: BorderSide(
-                              color: Colors.grey,
-                              width: 5,
-                            )),
-                            suffixIcon: _isFirstNameValid
-                                ? null
-                                : Icon(
-                                    Icons.error,
-                                    color: redColor,
-                                    size: 30.sp,
+                    child: Form(
+                        key: _formKey,
+                        child: Column(
+                          children: [
+                            TextFormField(
+                              decoration: InputDecoration(
+                                  hintText: 'First Name',
+                                  hintStyle: GoogleFonts.poppins(
+                                    fontSize: 16.sp,
+                                    fontWeight: FontWeight.w600,
+                                    color: greyishBlueColor,
+                                  ),
+                                  border: const OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                    color: Colors.grey,
+                                    width: 5,
                                   )),
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            setState(() {
-                              _isFirstNameValid = false;
-                            });
-                            return 'First Name cannot be empty';
-                          } else {
-                            setState(() {
-                              _isFirstNameValid = true;
-                            });
-                          }
-                          return null;
-                        },
-                      ),
-                      SizedBox(
-                        height: 20.h,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                            hintText: 'Last Name',
-                            hintStyle: GoogleFonts.poppins(
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w600,
-                              color: greyishBlueColor,
+                                  suffixIcon: _isFirstNameValid
+                                      ? null
+                                      : Icon(
+                                          Icons.error,
+                                          color: redColor,
+                                          size: 30.sp,
+                                        )),
+                              validator: (value) {
+                                if (value!.isEmpty) {
+                                  setState(() {
+                                    _isFirstNameValid = false;
+                                  });
+                                  return 'First Name cannot be empty';
+                                } else {
+                                  setState(() {
+                                    _isFirstNameValid = true;
+                                  });
+                                }
+                                return null;
+                              },
                             ),
-                            border: const OutlineInputBorder(
-                                borderSide: BorderSide(
-                              color: Colors.grey,
-                              width: 5,
-                            )),
-                            suffixIcon: _isLastNameValid
-                                ? null
-                                : Icon(
-                                    Icons.error,
-                                    color: redColor,
-                                    size: 30.sp,
-                                  )),
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            setState(() {
-                              _isLastNameValid = false;
-                            });
-                            return 'Last Name cannot be empty';
-                          } else {
-                            setState(() {
-                              _isLastNameValid = true;
-                            });
-                          }
-                          return null;
-                        },
-                      ),
-                      SizedBox(
-                        height: 20.h,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                            hintText: 'Email Address',
-                            hintStyle: GoogleFonts.poppins(
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w600,
-                              color: greyishBlueColor,
+                            SizedBox(
+                              height: 20.h,
                             ),
-                            border: const OutlineInputBorder(
-                                borderSide: BorderSide(
-                              color: Colors.grey,
-                              width: 5,
-                            )),
-                            suffixIcon: _isEmailValid
-                                ? null
-                                : Icon(
-                                    Icons.error,
-                                    color: redColor,
-                                    size: 30.sp,
+                            TextFormField(
+                              decoration: InputDecoration(
+                                  hintText: 'Last Name',
+                                  hintStyle: GoogleFonts.poppins(
+                                    fontSize: 16.sp,
+                                    fontWeight: FontWeight.w600,
+                                    color: greyishBlueColor,
+                                  ),
+                                  border: const OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                    color: Colors.grey,
+                                    width: 5,
                                   )),
-                        validator: (value) {
-                          if (!RegExp(
-                                  r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
-                              .hasMatch(value!)) {
-                            setState(() {
-                              _isEmailValid = false;
-                            });
+                                  suffixIcon: _isLastNameValid
+                                      ? null
+                                      : Icon(
+                                          Icons.error,
+                                          color: redColor,
+                                          size: 30.sp,
+                                        )),
+                              validator: (value) {
+                                if (value!.isEmpty) {
+                                  setState(() {
+                                    _isLastNameValid = false;
+                                  });
+                                  return 'Last Name cannot be empty';
+                                } else {
+                                  setState(() {
+                                    _isLastNameValid = true;
+                                  });
+                                }
+                                return null;
+                              },
+                            ),
+                            SizedBox(
+                              height: 20.h,
+                            ),
+                            TextFormField(
+                              decoration: InputDecoration(
+                                  hintText: 'Email Address',
+                                  hintStyle: GoogleFonts.poppins(
+                                    fontSize: 16.sp,
+                                    fontWeight: FontWeight.w600,
+                                    color: greyishBlueColor,
+                                  ),
+                                  border: const OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                    color: Colors.grey,
+                                    width: 5,
+                                  )),
+                                  suffixIcon: _isEmailValid
+                                      ? null
+                                      : Icon(
+                                          Icons.error,
+                                          color: redColor,
+                                          size: 30.sp,
+                                        )),
+                              validator: (value) {
+                                if (!RegExp(
+                                        r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
+                                    .hasMatch(value!)) {
+                                  setState(() {
+                                    _isEmailValid = false;
+                                  });
 
-                            return 'Looks like this is not an email';
-                          } else {
-                            setState(() {
-                              _isEmailValid = true;
-                            });
-                          }
-                          return null;
-                        },
-                      ),
-                      SizedBox(
-                        height: 20.h,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                            hintText: 'Password',
-                            hintStyle: GoogleFonts.poppins(
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w600,
-                              color: greyishBlueColor,
+                                  return 'Looks like this is not an email';
+                                } else {
+                                  setState(() {
+                                    _isEmailValid = true;
+                                  });
+                                }
+                                return null;
+                              },
                             ),
-                            border: const OutlineInputBorder(
-                                borderSide: BorderSide(
-                              color: Colors.grey,
-                              width: 5,
-                            )),
-                            suffixIcon: _isPasswordValid
-                                ? null
-                                : Icon(
-                                    Icons.error,
-                                    color: redColor,
-                                    size: 30.sp,
+                            SizedBox(
+                              height: 20.h,
+                            ),
+                            TextFormField(
+                              decoration: InputDecoration(
+                                  hintText: 'Password',
+                                  hintStyle: GoogleFonts.poppins(
+                                    fontSize: 16.sp,
+                                    fontWeight: FontWeight.w600,
+                                    color: greyishBlueColor,
+                                  ),
+                                  border: const OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                    color: Colors.grey,
+                                    width: 5,
                                   )),
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            setState(() {
-                              _isPasswordValid = false;
-                            });
+                                  suffixIcon: _isPasswordValid
+                                      ? null
+                                      : Icon(
+                                          Icons.error,
+                                          color: redColor,
+                                          size: 30.sp,
+                                        )),
+                              validator: (value) {
+                                if (value!.isEmpty) {
+                                  setState(() {
+                                    _isPasswordValid = false;
+                                  });
 
-                            return 'Password cannot be empty';
-                          } else {
-                            setState(() {
-                              _isPasswordValid = true;
-                            });
-                          }
-                          return null;
-                        },
-                      ),
-                      ],
-                    )),
+                                  return 'Password cannot be empty';
+                                } else {
+                                  setState(() {
+                                    _isPasswordValid = true;
+                                  });
+                                }
+                                return null;
+                              },
+                            ),
+                            SizedBox(
+                              height: 18.h,
+                            ),
+                            MaterialButton(
+                              color: greenColor,
+                              padding: EdgeInsets.symmetric(vertical: 22.h),
+                              onPressed: () {
+                                _formKey.currentState!.validate();
+                              },
+                              elevation: 1,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.r)),
+                              minWidth: double.infinity,
+                              child: Text(
+                                'CLAIM YOUR FREE TRIAL',
+                                style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 18.sp,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 18.h,
+                            ),
+                          ],
+                        )),
                   )
                 ],
               ),
