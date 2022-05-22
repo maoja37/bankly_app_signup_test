@@ -20,6 +20,22 @@ class _PhoneScreenLayoutState extends State<PhoneScreenLayout> {
   bool _isPasswordValid = true;
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    ScreenUtil.init(context, designSize: const Size(355, 850));
+    return Scaffold(
+      backgroundColor: redColor,
+      body: Stack(
+        fit: StackFit.expand,
+        children: [
+           Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/bg-intro-mobile.png"),
+                fit: BoxFit.fill,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
